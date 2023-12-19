@@ -1,0 +1,170 @@
+/* 
+
+RESET - Andy Bell
+https://andy-bell.co.uk/a-more-modern-css-reset/
+
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html{
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements */
+ul, 
+ol {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* || VARIABLES */
+
+:root {
+
+  /* COLORS */
+
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+
+  /* FONTS */
+
+  /* --fs-small: 0.8125rem; */
+  --fs-regular: 0.9375rem;
+  --fs-large: 2.5rem;
+  --fs-xl: 3rem;
+
+  --fw-regular: 400;
+  --fw-med: 500;
+  --fw-bold: 700;
+}
+
+/* || GERNEARL */
+
+body {
+  /* display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap; */
+
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;;
+}
+
+/* || BLOCKS */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.c-container {
+  max-width: 19rem;
+}
+
+.c-container__text-half {
+  text-align: center;
+}
+
+.reviews {
+  margin-top: 1.5rem;
+}
+
+.review {
+  background-color: var(--light-grayish-magenta);
+  margin-bottom: 1rem;
+  color: var(--very-dark-magenta);
+  font-weight: var(--fw-bold);
+  padding: 0.5rem;
+}
+
+.cards-half__profile {
+  background-color: var(--very-dark-magenta);
+  padding: 2rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.cards-half__profile figure {
+  display: flex;
+  column-gap: 2rem;
+}
+
+figcaption {
+  align-self: center;
+}
+
+/* || ELEMENTS */
+
+.title {
+  color: var(--very-dark-magenta);
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+  letter-spacing: -1px;
+}
+
+.intro {
+  margin-top: 1.5rem;
+  color: var(--dark-grayish-magenta);
+}
+
+.cards-half__profile img {
+  border-radius: 50%;
+  max-width: 50%;
+}
+
+.cards-half__profile figcaption::after {
+  content: "Verified Buyer";
+  display: block;
+  color: var(--soft-pink);
+}
+
+blockquote {
+  margin-top: 2rem;
+}
+/* How to shrink the profile image?  */
+
