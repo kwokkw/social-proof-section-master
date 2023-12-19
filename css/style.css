@@ -72,22 +72,13 @@ picture {
 /* || GERNEARL */
 
 body {
-  /* display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  flex-wrap: wrap; */
-
+  font-size: var(--fs-regular);
   font-family: "League Spartan", sans-serif;
-}
-
-main {
   display: flex;
   justify-content: center;
   align-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 4.5rem;
-  margin-bottom: 4.5rem;;
 }
 
 /* || BLOCKS */
@@ -95,44 +86,37 @@ main {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: relative;
+  bottom: 1rem;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-.c-container {
+.container {
+  --block-spacer: 2.5rem;
+  --element-spacer: 1.5rem;
+
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
   max-width: 19rem;
 }
 
-.c-container__text-half {
+.intro,
+.reviews {
   text-align: center;
 }
 
 .reviews {
-  margin-top: 1.5rem;
+  margin-top: var(--block-spacer);
 }
 
-.review {
-  background-color: var(--light-grayish-magenta);
-  margin-bottom: 1rem;
-  color: var(--very-dark-magenta);
-  font-weight: var(--fw-bold);
-  padding: 0.5rem;
-}
-
-.cards-half__profile {
-  background-color: var(--very-dark-magenta);
-  padding: 2rem;
-  color: var(--white);
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-}
-
-.cards-half__profile figure {
+.testimonies figure {
   display: flex;
   column-gap: 2rem;
 }
+
 
 figcaption {
   align-self: center;
@@ -140,31 +124,89 @@ figcaption {
 
 /* || ELEMENTS */
 
-.title {
+.intro__title {
   color: var(--very-dark-magenta);
   font-size: var(--fs-large);
   font-weight: var(--fw-bold);
   letter-spacing: -1px;
 }
 
-.intro {
-  margin-top: 1.5rem;
+.intro__paragraph {
+  margin-top: var(--element-spacer);
   color: var(--dark-grayish-magenta);
 }
 
-.cards-half__profile img {
-  border-radius: 50%;
-  max-width: 50%;
+.review {
+  background-color: var(--light-grayish-magenta);
+  margin-top: 1rem;
+  color: var(--very-dark-magenta);
+  font-weight: var(--fw-bold);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.cards-half__profile figcaption::after {
+.review img {
+  display: inline;
+}
+
+.testimony {
+  background-color: var(--very-dark-magenta);
+  padding: 2rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  margin-top: var(--element-spacer);
+  font-size: var(--fs-regular);
+}
+
+.testimonies img {
+  border-radius: 50%;
+  max-width: 2.5rem;
+  height: auto;
+}
+
+.name {
+  font-weight: var(--fw-bold);
+}
+
+.testimonies figcaption::after {
   content: "Verified Buyer";
   display: block;
   color: var(--soft-pink);
+  font-weight: var(--fw-regular);
 }
 
 blockquote {
-  margin-top: 2rem;
-}
-/* How to shrink the profile image?  */
+  margin-top: var(--element-spacer);
+} 
+
+/* @media screen and (min-width: 64rem) {
+
+  .c-container {
+    max-width: 60rem;
+    display: grid;  
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .split {
+    grid-area: 1/ 1/ span 1/ span 1;
+  }
+
+  .reviews {
+    grid-area: 1/ 2/ span 1/ span 1;
+  }
+
+  .c-container__cards-half {
+    grid-area: 2/ 1/ span 1/ span 2;
+  }
+} */
+
+
+/* 
+
+Best practice to shrink the profile image? 
+
+Why the flex-wrap: nowrap property prevents align-content from having an effect.
+
+
+*/
 
