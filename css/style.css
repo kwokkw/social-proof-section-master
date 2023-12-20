@@ -179,26 +179,89 @@ blockquote {
   margin-top: var(--element-spacer);
 } 
 
-/* @media screen and (min-width: 64rem) {
-
-  .c-container {
-    max-width: 60rem;
-    display: grid;  
+@media screen and (min-width: 64rem) {
+  
+  .container {
+    max-width: 70rem;
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
-  .split {
+  /* || INTRO */
+
+  .intro {
     grid-area: 1/ 1/ span 1/ span 1;
+    text-align: left;
+    padding: 1.5rem;
   }
+
+  .intro__title {
+    max-width: 20rem;
+    font-size: var(--fs-xl);
+  }
+
+  .intro__paragraph {
+    font-size: var(--fs-regular);
+  }
+
+  /* || REVIEWS */
 
   .reviews {
     grid-area: 1/ 2/ span 1/ span 1;
+    text-align: left;
+    max-width: 23rem;
+    justify-self: flex-end;
   }
 
-  .c-container__cards-half {
-    grid-area: 2/ 1/ span 1/ span 2;
+  .review {
+    padding: 1rem 1.5rem;
   }
-} */
+
+  .reviews img, 
+  .reviews p {
+    display: inline;
+  }
+
+  .review p {
+    margin-left: 1rem;
+  }
+
+  .reviews .review:first-child {
+    position: relative;
+    right: 5rem;
+  }
+
+  .reviews .review:nth-child(2) {
+    position: relative;
+    right: 2.5rem;
+  }
+
+  /* || TESTIMONIES */
+
+  .testimonies {
+    grid-area: 2/ 1/ span 1/ span 2;
+    display: flex;
+    column-gap: 1rem;
+    margin-top: var(--block-spacer);
+  }
+
+  .testimony {
+    max-width: 20.5rem;
+  }
+
+  .testimony:nth-child(2) {
+    position: relative;
+    top: 1rem;
+  }
+
+  .testimony:last-child {
+    position: relative;
+    top: 2rem;
+  }
+
+
+}
 
 
 /* 
@@ -207,6 +270,7 @@ Best practice to shrink the profile image?
 
 Why the flex-wrap: nowrap property prevents align-content from having an effect.
 
+Does every element need a `max-width` on the desktop design in ordre to match the design?
 
 */
 
