@@ -49,9 +49,10 @@ Users should be able to:
 
 ### Useful resources
 
-
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@kwokkw](https://www.frontendmentor.io/profile/kwokkw)
 
 ## Acknowledgments
+
+[Grace Snow](https://fedmentor.dev/)
